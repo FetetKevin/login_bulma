@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Log in JSON</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="columns is-desktop">
+
+            <div class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                <h1 class="title is-flex is-justify-content-center">
+                    TITRE RANDOM MDR
+                </h1>
+                <p class="subtitle mt-6 ml-6">Lorem ipsum dolor sit amet, 
+                                        consectetur adipisicing elit.
+                                        In corrupti at iure ut pariatur rem nam non, 
+                                        sunt perspiciatis saepe.
+                                        <br>
+                                        Lorem ipsum dolor sit amet, 
+                                        consectetur adipisicing elit.
+                                        In corrupti at iure ut pariatur rem nam non, 
+                                        sunt perspiciatis saepe.</p>
+                  
+                <div class="field mt-4" style="width: 80%;">
+                    <p id="success" class="help is-success"></p>
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id="mail" class="input" type="email" placeholder="Entrez votre adresse mail" value="">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <!-- <span class="icon is-small is-right">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </span> -->
+                    </div>
+                    <p id="err_mail" class="help is-danger"></p>
+                </div>
+
+                <div class="field" style="width: 80%;">
+                    <label class="label">Mot de passe</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id="pass" class="input" type="text" placeholder="Entrez votre mot de passe" value="">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <!-- <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                        </span> -->
+                    </div>
+                    <p id="err_pass" class="help is-danger"></p>
+                </div>
+                   
+                <div class="field is-grouped is-flex is-flex-direction-column mt-2" style="width:80%;">
+                    <div class="control mt-2">
+                        <button disabled id="submit" class="button is-link">Submit</button>
+                    </div>
+                    <div class="control mt-2">
+                        <a href="#">Mot de passe oublié?</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-hidden-touch is-three-fifths" id="test">
+                <!-- <img class="is-full" src="assets/img/mountains.jpg" alt=""> -->
+            </div>
+
+        </div>
+    </div>
+
+    
+      
+
+    
+    
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
