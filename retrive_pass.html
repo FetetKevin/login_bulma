@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Twhooter log-in</title>
+    <title>Twhooter mot de passe oublié</title>
 </head>
 <body>
 
@@ -16,15 +16,15 @@
 
             <div class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
                 <h1 class="title is-flex is-justify-content-center">
-                    Sign-In
+                    Reset password
                 </h1>
-                <p class="subtitle mt-6" style="width: 70%;">Access the DashLite panel using your email and passcode.</p>
+                <p class="subtitle mt-4" style="width: 70%;">If you forgot your password, well, then we’ll email you instructions to reset your password.</p>
                   
                 <div class="field mt-4" style="width: 70%;">
                     <p id="success" class="help is-success"></p>
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input id="mail" class="input" type="email" placeholder="Entrez votre adresse mail" value="">
+                        <input id="retrive_mail" class="input" type="email" placeholder="Entrez votre adresse mail" value="">
                         <span class="icon is-small is-left">
                             <i class="fa fa-envelope"></i>
                         </span>
@@ -34,27 +34,13 @@
                     </div>
                     <p id="err_mail" class="help is-danger"></p>
                 </div>
-
-                <div class="field" style="width: 70%;">
-                    <label class="label">Mot de passe</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input id="pass" class="input" type="text" placeholder="Entrez votre mot de passe" value="">
-                        <span class="icon is-small is-left">
-                            <i class="fa fa-user"></i>
-                        </span>
-                        <!-- <span class="icon is-small is-right">
-                            <i class="fa fa-check"></i>
-                        </span> -->
-                    </div>
-                    <p id="err_pass" class="help is-danger"></p>
-                </div>
                    
                 <div class="field is-grouped is-flex is-flex-direction-column mt-2" style="width:70%;">
                     <div class="control mt-2">
                         <button disabled id="submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control mt-2">
-                        <a href="retrive_pass.html">Mot de passe oublié?</a>
+                        <a href="index.html">Retourner a l'accueil</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +51,8 @@
 
         </div>
     </div>
+
     
-    <script src="app.js"></script>
+    <script src="retrive_pass.js"></script>
 </body>
 </html>

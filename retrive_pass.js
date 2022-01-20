@@ -1,23 +1,18 @@
 window.onload = function() {
-    document.querySelector("#mail").onkeyup = function() {
-        testFields();
-    };
-    document.querySelector("#pass").onkeyup = function() {
-        testFields();
+    document.querySelector("#retrive_mail").onkeyup = function() {
+        testField();
     };
 };
 
-function testFields() {
-    let input_mail = document.querySelector('#mail').value;
-    let input_pass = document.querySelector('#pass').value;
-    if(input_mail && input_pass)
+function testField() {
+    let input_mail = document.querySelector('#retrive_mail').value;
+    if(input_mail)
         document.querySelector('#submit').disabled = false;
     else{
         document.querySelector('#submit').disabled = true;
     }
-    return [input_mail, input_pass];
+    return [input_mail];
 }
-
 
 document.querySelector('#submit').addEventListener('click', verif_form);
 function verif_form(){
@@ -30,32 +25,26 @@ function verif_form(){
             document.querySelector('#submit').classList.add('loader');
             setInterval(()=>{
                 document.querySelector('#submit').classList.remove('loader');
-                location.replace('home.html');
+                location.replace('index.html');
             },4000);
         }
         else {
 
+            // console.log(data.statut);
+            // console.log(data.errors[4]);
+
             if(data.statut == "error" && data.errors[1] == 1){
                 document.querySelector('#err_mail').innerHTML = "MISSING LOGIN";
-                document.querySelector('#mail').classList.add('is-danger');
+                document.querySelector('#retrive_mail').classList.add('is-danger');
             } 
             if(data.statut == "error" && data.errors[2] == 1){
                 document.querySelector('#err_mail').innerHTML = "INVALID LOGIN";
-                document.querySelector('#mail').classList.add('is-danger');
+                document.querySelector('#retrive_mail').classList.add('is-danger');
             } 
-            if(data.statut == "error" && data.errors[3] == 1){
-                document.querySelector('#err_pass').innerHTML = "MISSING PASSWORD";
-                document.querySelector('#pass').classList.add('is-danger');
-            }
-            if(data.statut == "error" && data.errors[4] == 1){
-                document.querySelector('#err_pass').innerHTML = "INVALID PASSWORD";
-                document.querySelector('#pass').classList.add('is-danger');
-            }
 
             // Reset du btn
 
         }
-
         
     })
     .catch((error) => {
