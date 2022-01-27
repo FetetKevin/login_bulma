@@ -22,7 +22,7 @@ function testFields() {
 document.querySelector('#submit').addEventListener('click', verif_form);
 function verif_form(){
 
-    fetch('./login_error.json')
+    fetch('./login_success.json')
     .then(r => r.json())
     .then(data => {
         if(data.statut == "success"){
